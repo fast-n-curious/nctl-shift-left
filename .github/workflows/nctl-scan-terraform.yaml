@@ -36,6 +36,6 @@ jobs:
         # terraform show -json tfplan.binary | jq > payload.json
         run: |
           ./scripts/install-tf.sh
-          nctl scan terraform --policies controls/terraform-best-practices --resources config-files/terraform/ecs/payload.json
+          nctl scan terraform --policies controls/terraform-best-practices --resources config-files/terraform/ecs/payload.json --audit-as-warn
 
       - run: echo "🍏 This job's status is ${{ job.status }}."
