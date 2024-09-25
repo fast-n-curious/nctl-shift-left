@@ -34,7 +34,7 @@ jobs:
         run: nctl scan kubernetes --policies controls/pod-security --resources config-files/k8s --output json --audit-as-warn
 
       - name: NCTL Scan - YAML output
-        run: nctl scan kubernetes --policies controls/pod-security --resources config-files/k8s --output yaml
+        run: nctl scan kubernetes --policies controls/pod-security --resources config-files/k8s --output yaml --audit-as-warn
 
       - name: NCTL Scan - SARIF output
         run: nctl scan kubernetes --policies controls/pod-security --resources config-files/k8s --output sarif --output results.sarif --audit-as-warn
